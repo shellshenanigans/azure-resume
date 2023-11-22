@@ -12,7 +12,7 @@ html {
 }
 
 html {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 body {
@@ -35,6 +35,7 @@ a {
   font-weight: 700;
   font-size: 2rem;
   text-transform: uppercase;
+  margin-bottom: -0.4rem;
 }
 
 /* Layout */
@@ -42,9 +43,9 @@ a {
   width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-auto-columns: 20%, auto;
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 0.5em;
+  grid-auto-columns: 15%, auto;
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 20px;
   grid-template-areas:
     "top         top"
     "left        right";
@@ -52,31 +53,30 @@ a {
 
 .top {
   grid-area: top;
-  padding: 0.5em;
-  gap: 0.5em;
+  gap: 20px;
   display: grid;
-  grid-auto-columns: minmax(100px, auto);
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  grid-auto-rows: minmax(10px, auto);
   grid-template-areas: "profileimg profile";
+  margin-bottom: -3.1rem;
 }
 
 .left {
   grid-area: left;
-  padding: 0.5em;
 }
 .right {
   grid-area: right;
-  padding: 0.5em;
 }
 
 /* Top Styles */
 
 .profileimg {
   grid-area: profileimg;
-  max-width: 250px;
-  width: 100%;
+  max-width: 200px;
+  width: auto;
   height: auto;
-  border-radius: 50%;
+  margin-bottom: -1.8rem;
+  margin-right: -1.5rem;
 }
 
 .profile {
@@ -91,7 +91,7 @@ a {
   font-size: clamp(2rem, 8vw, 4rem);
   text-transform: uppercase;
   display: block;
-  margin-bottom: -0.8rem;
+  margin-bottom: -1.8rem;
 }
 
 .profile_name_lastName {
@@ -100,19 +100,31 @@ a {
   font-size: clamp(2.5rem, 15vw, 7rem);
   text-transform: uppercase;
   display: block;
+  margin-bottom: -2.8rem;
 }
 
 .profile_title {
   font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
+  margin-bottom: -0.3rem;
+  margin-left: 2.5rem;
 }
 
 .profile_description {
   color: var(--secondary-text-color);
+  margin-left: 2.5rem;
 }
 
 /* Side Styles */
+
+.item_title {
+  margin-bottom: 0.3rem;
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 
 .item_preTitle,
 .item_subtitle {
@@ -120,25 +132,46 @@ a {
   color: var(--secondary-text-color);
 }
 
+.certificate_date {
+  color: var(--secondary-text-color);
+  margin-bottom: 0rem;
+}
+
 .certificate_item {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  margin-bottom: -1.8rem;
 }
 
 .social_item {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /* Experience Styles */
 
+.experience {
+  margin-left: -11rem;
+}
 .experience_details {
   color: var(--secondary-text-color);
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 2rem;
+  margin-bottom: -1.2rem;
+}
+
+.experience_jobTitle {
+  margin-bottom: -0.8rem;
+  color: var(--primary-text-color);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 /* Responsive Styling */
@@ -162,9 +195,5 @@ a {
   }
   .description {
     word-wrap: break-word;
-  }
-  .profileimg {
-    max-width: 100px;
-    width: 100%;
   }
 }
