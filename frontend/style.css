@@ -8,7 +8,7 @@
 
 body,
 html {
-  height: 100vh;
+  height: 100%;
 }
 
 html {
@@ -40,17 +40,14 @@ a {
 
 /* Layout */
 .content {
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-auto-columns: 15%, auto;
-  grid-auto-rows: minmax(10px, auto);
-  grid-gap: 20px;
   grid-template-areas:
-    "top         top"
-    "left        right";
+    "top top"
+    "left right";
+  grid-gap: 20px;
 }
-
 .top {
   grid-area: top;
   gap: 20px;
@@ -153,11 +150,12 @@ a {
   font-size: 1.2rem;
 }
 
+.education {
+  margin-bottom: -1rem;
+}
+
 /* Experience Styles */
 
-.experience {
-  margin-left: -11rem;
-}
 .experience_details {
   color: var(--secondary-text-color);
   display: flex;
@@ -178,8 +176,7 @@ a {
 
 @media (max-width: 768px) {
   .content {
-    width: auto;
-    grid-gap: 0.5em;
+    width: 100%;
     grid-auto-columns: 100%;
     grid-template-areas:
       "top"
@@ -187,13 +184,9 @@ a {
       "right";
   }
   .top {
-    grid-gap: 0.5em;
     grid-auto-columns: 100%;
     grid-template-areas:
       "profileimg"
       "profile";
-  }
-  .description {
-    word-wrap: break-word;
   }
 }
